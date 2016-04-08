@@ -14,7 +14,7 @@ int status = WL_IDLE_STATUS;
 WiFiClient  client;
 
 long myChannelNumber = 106657; 
-const char * myWriteAPIKey = "GALN6Y5ZB7SS9EMD"; 
+const char * myWriteAPIKey = "xxxxxx"; 
 
 // Setup
 #define pir D0
@@ -39,8 +39,8 @@ void loop() {
   ThingSpeak.setField(2, motion);
   ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);  
 
-  eiotcloud.sendParameter("57050077c943a0661cf314bc/17yzUGAspb7srIv0", light);
-  eiotcloud.sendParameter("57050077c943a0661cf314bc/uHIQBZexNqt7gyIq", motion);
+  eiotcloud.sendParameter("xxxxxx", light);
+  eiotcloud.sendParameter("xxxxxx", motion);
   
    val = digitalRead(pir);
     if (val == HIGH) {
